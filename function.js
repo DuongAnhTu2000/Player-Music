@@ -2,6 +2,7 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const PlAYER_STORAGE_KEY = "MUSIC_PLAYER";
+const VOLUME_VALUE_KEY = "VOLUME_VALUE";
 
 const player = $('.player')
 const cd = $('.cd')
@@ -16,6 +17,7 @@ const prevBtn = $('.btn-prev')
 const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
 const volumeRange = $('#controls_lever_range')
+const muteBtn = $('.btn-mute')
 
 const app = {
     currentIndex: 0,
@@ -27,67 +29,67 @@ const app = {
         {
             name: "Scared To Be Lonely",
             singer: "Martin Garrix feat Dua Lipa",
-            path: "../assets/music/song1.mp3",
+            path: "assets/music/song1.mp3",
             image: "https://data.chiasenhac.com/data/cover/69/68364.jpg"
         },
         {
             name: "All too well",
             singer: "Taylor Swift",
-            path: "../assets/music/song2.mp3",
+            path: "assets/music/song2.mp3",
             image: "https://data.chiasenhac.com/data/cover/1/621.jpg"
         },
         {
             name: "We Are The People",
             singer: "Martin Garrix",
-            path: "../assets/music/song3.mp3",
+            path: "assets/music/song3.mp3",
             image: "https://data.chiasenhac.com/data/cover/141/140295.jpg"
         },
         {
             name: "No Sleep",
             singer: "Martin Garrix",
-            path: "../assets/music/song4.mp3",
+            path: "assets/music/song4.mp3",
             image: "https://data.chiasenhac.com/data/cover/148/147903.jpg"
         },
         {
             name: "Bước Qua Mùa Cô Đơn",
             singer: "Vũ",
-            path: "../assets/music/song5.mp3",
+            path: "assets/music/song5.mp3",
             image: "https://data.chiasenhac.com/data/cover/133/132452.jpg"
         },
         {
             name: "Thương Em Đến Già",
             singer: "Lê Bảo Bình",
-            path: "../assets/music/song6.mp3",
+            path: "assets/music/song6.mp3",
             image: "https://data.chiasenhac.com/data/cover/152/151778.jpg"
         },
         {
             name: "Together",
             singer: "Martin Garrix feat Matisse & Sadko",
-            path: "../assets/music/song7.mp3",
+            path: "assets/music/song7.mp3",
             image: "https://data.chiasenhac.com/data/cover/65/64710.jpg"
         },
         {
             name: "Love Story ",
             singer: "Taylor Swift",
-            path: "../assets/music/song8.mp3",
+            path: "assets/music/song8.mp3",
             image: "https://data.chiasenhac.com/data/cover/4/3562.jpg"
         },
         {
             name: "Let Me Love You",
             singer: "DJ Snake feat Justin Bieber",
-            path: "../assets/music/song9.mp3",
+            path: "assets/music/song9.mp3",
             image: "https://data.chiasenhac.com/data/cover/62/61377.jpg"
         },
         {
             name: "Cớ Sao Em Buồn",
             singer: "Nguyễn Trọng Tài",
-            path: "../assets/music/song10.mp3",
+            path: "assets/music/song10.mp3",
             image: "https://data.chiasenhac.com/data/cover/145/144395.jpg"
         },
         {
             name: "Exile",
             singer: "Taylor Swift",
-            path: "../assets/music/song11.mp3",
+            path: "assets/music/song11.mp3",
             image: "https://data.chiasenhac.com/data/cover/127/126308.jpg"
         },
     ],
@@ -118,6 +120,7 @@ const app = {
             }
         })
     },
+
     // Lưu data vào localStorage
     config: JSON.parse(localStorage.getItem(PlAYER_STORAGE_KEY)) || {},
         setConfig(key, value) {
@@ -260,13 +263,26 @@ const app = {
             }
             audio.play()
         }
+        // On/Off volume
+        muteBtn.onclick = function() {
+            if(audio.muted) {
+                audio.muted = false;
+                player.classList.remove('muting')
+                volumeRange.value = localStorage.getItem(VOLUME_VALUE_KEY) ? localStorage.getItem(VOLUME_VALUE_KEY) *100 : 50
+            } else {
+                audio.muted = true;
+                player.classList.add('muting')
+                volumeRange.value = 0
+            }
+        }
 
         volumeRange.onchange = function () {
             audio.volume = volumeRange.value / 100
+            localStorage.setItem(VOLUME_VALUE_KEY, audio.volume)
         }
         // Xử lý khi click vào bài hát
         playList.onclick = function (e) {
-            const songElementNode =e.target.closest('.song:not(.active)')
+            const songElementNode = e.target.closest('.song:not(.active)')
             if( songElementNode || e.target.closest('.option')) {
                 if(songElementNode) {
                    _this.currentIndex = Number(songElementNode.dataset.index)

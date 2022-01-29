@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music player</title>
+    <title>Music Player</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -51,7 +51,10 @@
           </div>
 
           <div class="volume-container">
-            <i class="fas fa-volume-off"></i>
+            <button class="btn-mute">
+              <i class="fas fa-volume-up icon-on"></i>
+              <i class="fas fa-volume-mute icon-off"></i>
+            </button>
             <input id="controls_lever_range" class="slider slider-volume" type="range" value="50" step="1" min="0" max="100">
           </div>
           <audio id="audio" src=""></audio>

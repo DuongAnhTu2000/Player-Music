@@ -37,6 +37,15 @@ html {
   display: none;
 }
 
+.player .icon-off {
+  display: none;
+}
+.player.muting .icon-off {
+  display: flex;
+}
+.player.muting .icon-on {
+  display: none;
+}
 .dashboard {
   padding: 16px 16px 14px;
   background-color: #fff;
@@ -45,7 +54,7 @@ html {
   max-width: 480px;
   border-bottom: 1px solid #ebebeb;
   position: fixed;
-  background-image: linear-gradient(to top , #b8a1dc, #a7bfed 102%);
+  background-image: linear-gradient(to top , #b8a1dc, #a7bfed 100%);
   border: none;
 }
 .dashboard.active .cd-inner {
@@ -167,16 +176,24 @@ header h2 {
   justify-content: center;
   align-items: center;
 }
-.fa-volume-off {
+.btn-mute {
   font-size: 24px;
   color: #d33737;
+  border: none;
+  background-color: transparent;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.btn-mute:hover {
+  opacity: 1;
 }
 .controls_time--left,
 .controls_time--right {
   margin: 14px;
   align-items: center;
-  color: #000;
+  color: #666;
 }
+
 /* PLAYLIST */
 .playlist {
   padding: 12px;
