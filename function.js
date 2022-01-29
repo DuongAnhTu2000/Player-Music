@@ -29,67 +29,67 @@ const app = {
         {
             name: "Scared To Be Lonely",
             singer: "Martin Garrix feat Dua Lipa",
-            path: "assets/music/song1.mp3",
+            path: "./assets/music/song1.mp3",
             image: "https://data.chiasenhac.com/data/cover/69/68364.jpg"
         },
         {
             name: "All too well",
             singer: "Taylor Swift",
-            path: "assets/music/song2.mp3",
+            path: "./assets/music/song2.mp3",
             image: "https://data.chiasenhac.com/data/cover/1/621.jpg"
         },
         {
             name: "We Are The People",
             singer: "Martin Garrix",
-            path: "assets/music/song3.mp3",
+            path: "./assets/music/song3.mp3",
             image: "https://data.chiasenhac.com/data/cover/141/140295.jpg"
         },
         {
             name: "No Sleep",
             singer: "Martin Garrix",
-            path: "assets/music/song4.mp3",
+            path: "./assets/music/song4.mp3",
             image: "https://data.chiasenhac.com/data/cover/148/147903.jpg"
         },
         {
             name: "Bước Qua Mùa Cô Đơn",
             singer: "Vũ",
-            path: "assets/music/song5.mp3",
+            path: "./assets/music/song5.mp3",
             image: "https://data.chiasenhac.com/data/cover/133/132452.jpg"
         },
         {
             name: "Thương Em Đến Già",
             singer: "Lê Bảo Bình",
-            path: "assets/music/song6.mp3",
+            path: "./assets/music/song6.mp3",
             image: "https://data.chiasenhac.com/data/cover/152/151778.jpg"
         },
         {
             name: "Together",
             singer: "Martin Garrix feat Matisse & Sadko",
-            path: "assets/music/song7.mp3",
+            path: "./assets/music/song7.mp3",
             image: "https://data.chiasenhac.com/data/cover/65/64710.jpg"
         },
         {
             name: "Love Story ",
             singer: "Taylor Swift",
-            path: "assets/music/song8.mp3",
+            path: "./assets/music/song8.mp3",
             image: "https://data.chiasenhac.com/data/cover/4/3562.jpg"
         },
         {
             name: "Let Me Love You",
             singer: "DJ Snake feat Justin Bieber",
-            path: "assets/music/song9.mp3",
+            path: "./assets/music/song9.mp3",
             image: "https://data.chiasenhac.com/data/cover/62/61377.jpg"
         },
         {
             name: "Cớ Sao Em Buồn",
             singer: "Nguyễn Trọng Tài",
-            path: "assets/music/song10.mp3",
+            path: "./assets/music/song10.mp3",
             image: "https://data.chiasenhac.com/data/cover/145/144395.jpg"
         },
         {
             name: "Exile",
             singer: "Taylor Swift",
-            path: "assets/music/song11.mp3",
+            path: "./assets/music/song11.mp3",
             image: "https://data.chiasenhac.com/data/cover/127/126308.jpg"
         },
     ],
@@ -103,7 +103,7 @@ const app = {
                     </div>
                     <div class="body">
                     <h3 class="title">${song.name}</h3>
-                    <p class="author">${song.singer}</p>
+                    <p class="./author">${song.singer}</p>
                     </div>
                     <div class="option">
                     <i class="fas fa-ellipsis-h"></i>
