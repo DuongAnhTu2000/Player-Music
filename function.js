@@ -169,13 +169,13 @@ const app = {
             cdThumbAnimate.pause()
         }
 
-        let checkOnmouseAndTouch = true;
+        let checkOnMouseAndTouch = true;
         progress.onmousedown = function () {
-            checkOnmouseAndTouch = false;
+            checkOnMouseAndTouch = false;
         }
 
         progress.ontouchstart = function () {
-            checkOnmouseAndTouch = false;
+            checkOnMouseAndTouch = false;
         }
 
         // Khi tiến độ bài hát thay đổi
@@ -183,7 +183,7 @@ const app = {
             const time_start = $('.controls_time--left');
             const time_count = $('.controls_time--right');
 
-            if (audio.duration && checkOnmouseAndTouch) {
+            if (audio.duration && checkOnMouseAndTouch) {
                 const progressBar = Math.floor(audio.currentTime / audio.duration * 100)
                 progress.value = progressBar
                 // _this.setConfig("currentTime", audio.currentTime)
@@ -215,7 +215,7 @@ const app = {
         progress.onchange = function (e) {
             const seekTime = audio.duration / 100 * e.target.value
             audio.currentTime = seekTime
-            checkOnmouseAndTouch = true;
+            checkOnMouseAndTouch = true;
         }
 
         // next bài hát
@@ -250,7 +250,7 @@ const app = {
 
         // Xử lý repeat lại bài hát
         repeatBtn.onclick = function () {
-            _this.isRepeat = !_this.isRepeat
+            _this.isRepeat = _this.isRepeat
             _this.setConfig('isRepeat', _this.isRepeat)
             repeatBtn.classList.toggle('active', _this.isRepeat)
         }
