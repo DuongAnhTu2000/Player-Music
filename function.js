@@ -30,67 +30,67 @@ const app = {
             name: "Scared To Be Lonely",
             singer: "Martin Garrix feat Dua Lipa",
             path: "./assets/music/song1.mp3",
-            image: "https://data.chiasenhac.com/data/cover/69/68364.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/playlist/2017/03/17/7/2/5/8/1489720853602_500.jpg"
         },
         {
             name: "All too well",
             singer: "Taylor Swift",
             path: "./assets/music/song2.mp3",
-            image: "https://data.chiasenhac.com/data/cover/1/621.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2021/11/22/3/0/c/0/1637554215656_500.jpg"
         },
         {
             name: "We Are The People",
             singer: "Martin Garrix",
             path: "./assets/music/song3.mp3",
-            image: "https://data.chiasenhac.com/data/cover/141/140295.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2021/05/19/5/1/f/b/1621399245995_500.jpg"
         },
         {
             name: "No Sleep",
             singer: "Martin Garrix",
             path: "./assets/music/song4.mp3",
-            image: "https://data.chiasenhac.com/data/cover/148/147903.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2019/02/21/5/0/3/0/1550765574531.jpg"
         },
         {
             name: "Bước Qua Mùa Cô Đơn",
             singer: "Vũ",
             path: "./assets/music/song5.mp3",
-            image: "https://data.chiasenhac.com/data/cover/133/132452.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2020/12/11/4/0/f/e/1607643612541.jpg"
         },
         {
             name: "Thương Em Đến Già",
             singer: "Lê Bảo Bình",
             path: "./assets/music/song6.mp3",
-            image: "https://data.chiasenhac.com/data/cover/152/151778.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2022/04/26/d/1/1/f/1650954484729.jpg"
         },
         {
             name: "Together",
             singer: "Martin Garrix feat Matisse & Sadko",
             path: "./assets/music/song7.mp3",
-            image: "https://data.chiasenhac.com/data/cover/65/64710.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/singer/avatar/2019/03/21/0/e/3/d/1553153837657.jpg"
         },
         {
-            name: "Love Story ",
+            name: "Love Story",
             singer: "Taylor Swift",
             path: "./assets/music/song8.mp3",
-            image: "https://data.chiasenhac.com/data/cover/4/3562.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2019/11/28/1/e/6/0/1574924746015_500.jpg"
         },
         {
             name: "Let Me Love You",
             singer: "DJ Snake feat Justin Bieber",
             path: "./assets/music/song9.mp3",
-            image: "https://data.chiasenhac.com/data/cover/62/61377.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2018/06/06/f/9/c/5/1528273240212_500.jpg"
         },
         {
             name: "Cớ Sao Em Buồn",
             singer: "Nguyễn Trọng Tài",
             path: "./assets/music/song10.mp3",
-            image: "https://data.chiasenhac.com/data/cover/145/144395.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/singer/avatar/2019/10/22/1/f/8/1/1571729753304.jpg"
         },
         {
             name: "Exile",
             singer: "Taylor Swift",
             path: "./assets/music/song11.mp3",
-            image: "https://data.chiasenhac.com/data/cover/127/126308.jpg"
+            image: "https://avatar-ex-swe.nixcdn.com/song/2020/07/24/f/6/5/1/1595573654337.jpg"
         },
     ],
 
